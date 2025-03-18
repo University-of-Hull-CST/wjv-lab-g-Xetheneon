@@ -1,1 +1,1 @@
-C:\Users\George\source\repos\Paralell_&_Concurrent\ -\ Rust\Lab\ 6\wjv-lab-g-Xetheneon\colliding_particle_threaded\target\release\particles.exe: C:\Users\George\source\repos\Paralell_&_Concurrent\ -\ Rust\Lab\ 6\wjv-lab-g-Xetheneon\colliding_particle_threaded\src\main.rs
+C:\Users\George\source\repos\Paralell_&_Concurrent\ -\ Rust\Lab\ 6\wjv-lab-g-Xetheneon\colliding_particle_threaded_atomic\target\release\particles.exe: C:\Users\George\source\repos\Paralell_&_Concurrent\ -\ Rust\Lab\ 6\wjv-lab-g-Xetheneon\colliding_particle_threaded_atomic\src\main.rs

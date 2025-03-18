@@ -84,9 +84,10 @@ impl ParticleSystem {
             collision_pool.scoped(|scope| {
                 for i in 0..NUM_OF_THREADS {
                     let particles = Arc::clone(&particles);
+                    let total_collisions = Arc::clone(&total_collisions);
                     scope.execute(move || {
                         let particles = particles.lock().unwrap();
-                        let mut collisions = total_collisions.lock().unwrap();
+                        
                         for slice in particles.chunks(NUM_OF_CHUNKS) {
                             thread_main_collisions(slice, i, &total_collisions);
                         }
@@ -97,7 +98,7 @@ impl ParticleSystem {
             iterations += 1;
         }
 
-        let final_collisions = total_collisions.load(Ordering::SeqCst);
+        let final_collisions = self.total_collisions.load(Ordering::SeqCst);
         (iterations, final_collisions)
     }
 }
